@@ -22,6 +22,7 @@ public class FishPathFinder {
               }
               line = br.readLine();
            }
+           br.close();
        } catch(FileNotFoundException fnf ){
            fnf.printStackTrace();
        } catch( IOException ioe ){
