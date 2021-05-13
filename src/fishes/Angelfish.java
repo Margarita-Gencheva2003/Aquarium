@@ -15,7 +15,7 @@ public class Angelfish extends Fish {
 	private final String name = "Angelfish";
 
 	public Angelfish() {
-            //test commit1
+            
                 maxSpeedX = 8;
                 maxSpeedY = 3;
 		FishPathFinder fpf = new FishPathFinder();
