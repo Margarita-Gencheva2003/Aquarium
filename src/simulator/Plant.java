@@ -10,7 +10,7 @@ public class Plant {
 
 	private int plantX1, plantX2;
 	private double plantY1, plantY2;
-	private int boundX, boundY;
+	private int boundWidth, boundHeight;
 	private double speedGrowth;
 
 	private double G = 255;
@@ -23,32 +23,32 @@ public class Plant {
 		G = 255;
 		
 		Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
-		boundY = (int) screenSize.getHeight();
-		boundX = (int) screenSize.getWidth();
+		boundHeight = (int) screenSize.getHeight();
+		boundWidth = (int) screenSize.getWidth();
 
 		Random rand = new Random();
 
-		plantX1 = rand.nextInt(boundX) + 1;
+		plantX1 = rand.nextInt(boundWidth) + 1;
 		plantX2 = plantX1;
 
-		plantY1 = boundY;
-		plantY2 = boundY;
+		plantY1 = boundHeight;
+		plantY2 = boundHeight;
 
 		speedGrowth = (double)( rand.nextInt(100) + 1) / 1000;
-		boundY = rand.nextInt(boundY) + 1;
+		boundHeight = rand.nextInt(boundHeight) + 1;
 	}
 
 	
 
 	public void growPlant() {
-		if (plantY2 > boundY / 2) {
+		if (plantY2 > boundHeight / 2) {
 			plantY2 -= speedGrowth;
 			if (G > 150) {
 				G -= speedGrowth / 10;
 			}
 		}
 
-		if (plantY2 <= boundY / 2) {
+		if (plantY2 <= boundHeight / 2) {
 			loadBounds();
 		}
 	}
