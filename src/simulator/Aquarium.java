@@ -64,9 +64,9 @@ public class Aquarium extends JPanel implements ActionListener {
 		frame.setVisible(true);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.setResizable(false);
-		// timer starts the life in my aquarium
-		aq.timer = new Timer(30, aq);
-		aq.timer.start();
+		// timer calls periodically a function(in out case: ActionPerformed
+		aq.timer = new Timer(30, aq);	
+                aq.timer.start();
 
 	}
 
