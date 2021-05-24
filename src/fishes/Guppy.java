@@ -1,8 +1,6 @@
 
 package fishes;
 
-import java.awt.Graphics;
-import java.awt.image.BufferedImage;
 import java.util.Random;
 
 import simulator.Fish;

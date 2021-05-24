@@ -1,6 +1,5 @@
 
 package fishes;
-import java.awt.Graphics;
 import java.util.Random;
 import simulator.Fish;
 import simulator.FishPathFinder;
